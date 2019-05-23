@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".SignUp"
+    tools:showIn="@layout/activity_sign_up">
+
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleLarge"
+        android:progress="50"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/defaultprofile"
+                android:id="@+id/registerProfileImg"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/TILRegisterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top">
+
+                <EditText
+                    android:id="@+id/registerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name_hint"
+                    android:textColor="@color/edit_text_text_color"
+                    android:textColorHint="@color/edit_text_hint_color"
+                    android:textSize="@dimen/edit_text_text_size"
+                    android:inputType="textCapSentences"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/edit_text_margin_top">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/TILRegisterCC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8">
+
+                    <EditText
+                        android:id="@+id/registerCC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/cc_hint"
+                        android:text="+92"
+                        android:textColor="@color/edit_text_text_color"
+                        android:textColorHint="@color/edit_text_hint_color"
+                        android:textSize="@dimen/edit_text_text_size"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:clickable="false"
+                        android:enabled="false"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/TILRegisterMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/registerMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mobile_hint"
+                        android:textColor="@color/edit_text_text_color"
+                        android:textColorHint="@color/edit_text_hint_color"
+                        android:textSize="@dimen/edit_text_text_size"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:maxLength="10"
+                        android:digits="0123456789"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/TILRegisterHomeTown"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top">
+
+                <EditText
+                    android:id="@+id/registerHomeTown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/home_town_hint"
+                    android:textColor="@color/edit_text_text_color"
+                    android:textColorHint="@color/edit_text_hint_color"
+                    android:textSize="@dimen/edit_text_text_size"
+                    android:inputType="text"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/TILRegisterDesignation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top">
+
+                <EditText
+                    android:id="@+id/registerDesignation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/designation_hint"
+                    android:textColor="@color/edit_text_text_color"
+                    android:textColorHint="@color/edit_text_hint_color"
+                    android:textSize="@dimen/edit_text_text_size"
+                    android:inputType="text"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/TILRegisterDepartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top">
+
+                <EditText
+                    android:id="@+id/registerDepartment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/department_hint"
+                    android:textColor="@color/edit_text_text_color"
+                    android:textColorHint="@color/edit_text_hint_color"
+                    android:textSize="@dimen/edit_text_text_size"
+                    android:inputType="text"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/TILRegisterCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top">
+
+                <EditText
+                    android:id="@+id/registerCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/company_hint"
+                    android:textColor="@color/edit_text_text_color"
+                    android:textColorHint="@color/edit_text_hint_color"
+                    android:textSize="@dimen/edit_text_text_size"
+                    android:inputType="text"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/TILRegisterEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/edit_text_margin_top">
+
+                <EditText
+                    android:id="@+id/registerEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email_hint"
+                    android:textColor="@color/edit_text_text_color"
+                    android:textColorHint="@color/edit_text_hint_color"
+                    android:textSize="@dimen/edit_text_text_size"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/TILRegisterPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/edit_text_margin_top"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp">
+
+                    <EditText
+                        android:id="@+id/registerPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/password_hint"
+                        android:textColor="@color/edit_text_text_color"
+                        android:textColorHint="@color/edit_text_hint_color"
+                        android:textSize="@dimen/edit_text_text_size"
+                        android:inputType="textPassword"
+                        android:singleLine="true" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/TILRegisterConfirmPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/edit_text_margin_top"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp">
+
+                    <EditText
+                        android:id="@+id/registerConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/confirm_password_hint"
+                        android:textColor="@color/edit_text_text_color"
+                        android:textColorHint="@color/edit_text_hint_color"
+                        android:textSize="@dimen/edit_text_text_size"
+                        android:inputType="textPassword"
+                        android:singleLine="true" />
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:text="@string/sign_up"
+                android:id="@+id/registerButton"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/gradientbutton"
+                android:textColor="@color/white"
+                android:textSize="@dimen/button_text_size"
+                android:layout_marginTop="20dp"
+                android:drawableRight="@drawable/next"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
